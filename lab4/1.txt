@@ -1,0 +1,7 @@
+gcc tcp_server.c -o tcp_server
+gcc tcp_client.c -o tcp_client
+
+./tcp_client 127.0.0.1 37224 3
+
+ps aux | grep "tcp_server"
+kill 
