@@ -1,0 +1,27 @@
+
+SERVER: 220 mailhog.example ESMTP MailHog
+CLIENT: HELO client.local
+ (Explanation: Представление клиента)
+SERVER: 250 Hello client.local
+CLIENT: MAIL 
+ (Explanation: Указание отправителя)
+SERVER: 550 Invalid syntax in MAIL command
+CLIENT: RCPT TO:<recipient@example.com>
+ (Explanation: Указание получателя)
+SERVER: 500 Unrecognised command
+CLIENT: DATA
+ (Explanation: Начало передачи тела письма)
+SERVER: 500 Unrecognised command
+CLIENT: Subject: Hello from C client
+From: iv222s14@example.com
+To: recipient@example.com
+
+Hello world,
+This is a test message sent from an SMTP client.
+.
+ (Explanation: Отправка тела письма, заканчивающегося точкой)
+SERVER: 500 Unrecognised command
+CLIENT: QUIT
+ (Explanation: Завершение SMTP-сессии)
+SERVER: 500 Unrecognised command
+500 Unrecognised command

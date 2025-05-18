@@ -1,0 +1,2 @@
+Hello world,
+This is a test message sent from an SMTP client.

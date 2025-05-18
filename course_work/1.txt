@@ -1,0 +1,28 @@
+python3 -m aiosmtpd -n -l localhost:1025
+
+./smtp_client localhost
+
+gcc smtp_client.c -o smtp_client
+./smtp_client 127.0.0.1
+
+#export DOCKER_HOST="tcp://127.0.0.1:2376"
+ps aux | grep 
+kill 
+ps aux | grep smtpd
+
+http://localhost:8025
+
+220 — приветствие
+250 — OK
+354 — ждёт тело письма
+221 — до свидания
+
+
+docker-compose up -d
+docker-compose down
+docker ps -a	
+docker rm <имя/ID>	
+docker images	
+docker rmi <имя_образа>	
+docker exec -it <имя> bash	
+docker-compose logs
